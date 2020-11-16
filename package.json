@@ -1,26 +1,48 @@
 {
-  "name": "pixelrpg",
-  "version": "1.0.0",
-  "description": "Game bot discord",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/FarDragi/PixelRpg.git"
-  },
-  "private": "true",
-  "author": {
-    "name": "Gabriel Paulucci",
-    "email": "gabrielpauluccimunizmendes@gmail.com",
-    "url": "https://github.com/Gabriel-Paulucci"
-  },
-  "bugs": {
-    "url": "https://github.com/FarDragi/PixelRpg/issues"
-  },
-  "homepage": "https://github.com/FarDragi/PixelRpg#readme",
-  "dependencies": {
-    "typescript": "^4.0.5"
-  }
+    "name": "pixelrpg",
+    "version": "1.0.0",
+    "description": "Game bot discord",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/FarDragi/PixelRpg.git"
+    },
+    "private": "true",
+    "author": {
+        "name": "Gabriel Paulucci",
+        "email": "gabrielpauluccimunizmendes@gmail.com",
+        "url": "https://github.com/Gabriel-Paulucci"
+    },
+    "bugs": {
+        "url": "https://github.com/FarDragi/PixelRpg/issues"
+    },
+    "homepage": "https://github.com/FarDragi/PixelRpg#readme",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^4.7.0",
+        "@typescript-eslint/parser": "^4.7.0",
+        "eslint": "^7.12.1",
+        "eslint-config-standard": "^16.0.1",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^4.2.1"
+    },
+    "dependencies": {
+        "typescript": "^4.0.5"
+    },
+    "engines": {
+        "node": ">=14.15.0",
+        "yarn": "^1.22.10"
+    },
+    "os": [
+        "linux",
+        "win32",
+        "darwin"
+    ],
+    "cpu": [
+        "x64",
+        "arm"
+    ]
 }
