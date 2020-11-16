@@ -1,0 +1,26 @@
+{
+  "name": "pixelrpg",
+  "version": "1.0.0",
+  "description": "Game bot discord",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FarDragi/PixelRpg.git"
+  },
+  "private": "true",
+  "author": {
+    "name": "Gabriel Paulucci",
+    "email": "gabrielpauluccimunizmendes@gmail.com",
+    "url": "https://github.com/Gabriel-Paulucci"
+  },
+  "bugs": {
+    "url": "https://github.com/FarDragi/PixelRpg/issues"
+  },
+  "homepage": "https://github.com/FarDragi/PixelRpg#readme",
+  "dependencies": {
+    "typescript": "^4.0.5"
+  }
+}
