@@ -4,7 +4,9 @@
     "description": "Game bot discord",
     "main": "src/index.ts",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "ts-node -r tsconfig-paths/register .",
+        "lint": "eslint . --ext .ts",
+        "build": "tsc -p ."
     },
     "repository": {
         "type": "git",
