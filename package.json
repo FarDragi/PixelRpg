@@ -2,7 +2,7 @@
     "name": "pixelrpg",
     "version": "1.0.0",
     "description": "Game bot discord",
-    "main": "src/index.js",
+    "main": "src/index.ts",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -30,6 +30,8 @@
         "eslint-plugin-promise": "^4.2.1"
     },
     "dependencies": {
+        "ts-node": "^9.0.0",
+        "tsconfig-paths": "^3.9.0",
         "typescript": "^4.0.5"
     },
     "engines": {
