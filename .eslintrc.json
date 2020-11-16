@@ -15,5 +15,10 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "accessor-pairs": "off"
     }
 }
