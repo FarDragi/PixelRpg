@@ -12,7 +12,8 @@ export interface IUsage {
 
 export interface ICommandInfo {
     description: string
-    module: string
+    module?: string
+    subcommands?: boolean
     usages?: IUsage[]
 }
 
@@ -23,30 +24,26 @@ export interface ICommand {
     visible(): boolean
 }
 
-export interface ICommands {
-    [keyof: string]: ICommand
-}
+export abstract class CommandBase implements ICommand {
+    ctx: Context
 
-/*
-@CommandInfo({
-    description: 'Sem descrição informada',
-    module: 'Default'
-})
-*/
-export abstract class Command implements ICommand {
-    async validAuthorAndChannel (ctx: Context): Promise<boolean> {
-        if (ctx.author.bot || !ctx.message.guild) {
+    constructor (ctx: Context) {
+        this.ctx = ctx
+    }
+
+    async validAuthorAndChannel (): Promise<boolean> {
+        if (this.ctx.author.bot || !this.ctx.message.guild) {
             return false
         }
 
         return true
     }
 
-    async validPermission (ctx: Context): Promise<boolean> {
+    async validPermission (): Promise<boolean> {
         return true
     }
 
-    abstract execCommand(ctx: Context): Promise<void>
+    abstract execCommand(): Promise<void>
 
     visible (): boolean {
         return true

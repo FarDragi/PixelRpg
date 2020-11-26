@@ -5,6 +5,7 @@ import { commandHandler } from './events/commandHandler'
 import { rateLimitHandler } from './events/rateLimitHandler'
 import { IBot } from './models/bot'
 import { ICommandInvoke, ICommandsInvoke } from './models/commandInvoke'
+import { CommandBase } from './models/commands'
 
 class PixelRpg implements IBot {
     readonly client: Client
@@ -62,7 +63,7 @@ class PixelRpg implements IBot {
     async registerCommands (): Promise<void> {
         this.commands = {}
 
-        glob('./src/core/commands/**/*.ts', {
+        glob('./src/core/commands/**/*.command.ts', {
             absolute: true
         }, (error, files) => {
             if (error) {
@@ -82,7 +83,7 @@ class PixelRpg implements IBot {
 
                 const command = new ClassDefinition()
 
-                if (command instanceof command) {
+                if (command instanceof CommandBase) {
                     this.registerCommand(ClassDefinition)
                     i++
                 }
