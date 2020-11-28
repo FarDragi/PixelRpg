@@ -7,7 +7,7 @@ import { IBot } from './models/bot'
 import { ICommandInvoke, ICommandsInvoke } from './models/commandInvoke'
 import { CommandBase } from './models/commands'
 
-class PixelRpg implements IBot {
+export class PixelRpg implements IBot {
     readonly client: Client
     private _token: string
     commands: ICommandsInvoke
@@ -113,7 +113,3 @@ class PixelRpg implements IBot {
         this.client.login(this._token)
     }
 }
-
-const pixelRpg = new PixelRpg()
-
-export default pixelRpg

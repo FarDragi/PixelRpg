@@ -1,0 +1,5 @@
+# Prisma Migrate lockfile v1
+
+20201127231112-init
+20201127231128-add-guild
+20201127231150-add-user
