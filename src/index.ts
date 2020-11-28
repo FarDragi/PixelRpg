@@ -2,14 +2,12 @@ import { PixelRpg } from '@bot'
 import { config } from 'dotenv'
 import { env } from 'process'
 import 'reflect-metadata'
-import prisma from './database'
+import './database'
 
 config()
 
 init().catch(error => {
     console.error(error)
-}).finally(() => {
-    prisma.$disconnect()
 })
 
 async function init () {
