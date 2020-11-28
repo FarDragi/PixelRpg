@@ -8,6 +8,6 @@ class Database {
     }
 }
 
-const prisma = new Database()
+const database = new Database()
 
-export default prisma
+export default database.prisma

@@ -3,21 +3,11 @@
 
 datasource db {
     provider = "mysql"
-    url      = env("DATABASE_URL")
+    url = "***"
 }
 
 generator client {
     provider = "prisma-client-js"
-}
-
-model Player {
-    id      Int   @id @default(autoincrement())
-    userId  Int
-    guildId Int
-    user    User  @relation(fields: [userId], references: [id])
-    guild   Guild @relation(fields: [guildId], references: [id])
-
-    @@unique([guildId, userId])
 }
 
 model Guild {
@@ -25,13 +15,11 @@ model Guild {
     discordId String      @unique
     configId  Int         @unique
     config    GuildConfig @relation(fields: [configId], references: [id])
-    Player    Player[]
 }
 
 model User {
-    id        Int      @id @default(autoincrement())
-    discordId String   @unique
-    Player    Player[]
+    id        Int    @id @default(autoincrement())
+    discordId String @unique
 }
 
 model GuildConfig {

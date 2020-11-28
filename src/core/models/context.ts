@@ -1,4 +1,5 @@
 import userResolver from '@bot/utils/userResolver'
+import { GuildConfig } from '@prisma/client'
 import { Client, DMChannel, Guild, GuildMember, Message, NewsChannel, TextChannel, User } from 'discord.js'
 import { IBot } from './bot'
 
@@ -13,6 +14,7 @@ export class Context {
     memberAuthor!: GuildMember | null
     channel!: TextChannel | DMChannel | NewsChannel
     guild!: Guild | null
+    guildConfig!: GuildConfig
 
     public getMember (resolver: string) {
         const id = userResolver(resolver)

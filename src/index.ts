@@ -9,7 +9,7 @@ config()
 init().catch(error => {
     console.error(error)
 }).finally(() => {
-    prisma.prisma.$disconnect()
+    prisma.$disconnect()
 })
 
 async function init () {
